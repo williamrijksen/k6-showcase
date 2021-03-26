@@ -4,10 +4,11 @@ module.exports = {
             {
                 source: '/heavy',
                 headers: [
-                    {
-                        key: 'Cache-Control',
-                        value: 's-maxage=60, stale-while-revalidate',
-                    }
+                    // disable cache for the k6 example
+                    // {
+                    //     key: 'Cache-Control',
+                    //     value: 's-maxage=60, stale-while-revalidate',
+                    // }
                 ],
             },
         ]
