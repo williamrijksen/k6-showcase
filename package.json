@@ -1,5 +1,5 @@
 {
-  "name": "fast-example",
+  "name": "slow-example",
   "version": "0.1.0",
   "private": true,
   "scripts": {
