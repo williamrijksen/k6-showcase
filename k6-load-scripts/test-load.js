@@ -17,10 +17,10 @@ export const options = {
 };
 export default function () {
     // our HTTP request, note that we are saving the response to res, which can be accessed later
-    const res = http.get('http://test.k6.io');
+    const res = http.get('https://slow-next-example.vercel.app/heavy');
     sleep(1);
     const checkRes = check(res, {
         'status is 200': (r) => r.status === 200,
-        'response body': (r) => r.body.indexOf('Feel free to browse') !== -1,
+        'response body': (r) => r.body.indexOf('Generated digest') !== -1,
     });
 }
