@@ -1,42 +1,16 @@
 runtime: nodejs14
 service: default
-# instance_class: F1
+instance_class: F1
 
-# automatic_scaling:
-#     max_concurrent_requests: 50
-#     max_instances: 15
-#     min_idle_instances: 1
-
-# handlers:
-#     - url: /_next/static
-#       static_dir: apps/vakanties/.next/static
-#       expiration: '1d'
-#       secure: always
-#       http_headers:
-#           Access-Control-Allow-Origin: '*'
-
-#     - url: /fonts
-#       static_dir: apps/vakanties/public/fonts
-#       expiration: '1d'
-#       secure: always
-#       http_headers:
-#           Access-Control-Allow-Origin: '*'
-
-#     - url: /images
-#       static_dir: apps/vakanties/public/images
-#       expiration: '1d'
-#       secure: always
-#       http_headers:
-#           Access-Control-Allow-Origin: '*'
-
-#     - url: /.*
-#       script: auto
-#       secure: always
+automatic_scaling:
+    max_concurrent_requests: 50
+    max_instances: 15
+    min_idle_instances: 1
 
 handlers:
-  - url: /.*
-    secure: always
-    script: auto
+    - url: /.*
+      script: auto
+      secure: always
 
 env_variables:
     NODE_ENV: production

@@ -5,7 +5,7 @@ import {randomBytes} from "crypto";
 
 const randomBytesAsync = promisify(randomBytes)
 
-function Heavy({ data }) {
+function HeavyCached({ data }) {
     return (
         <div className={styles.container}>
             <Head>
@@ -36,4 +36,4 @@ export async function getServerSideProps() {
     }
 }
 
-export default Heavy
+export default HeavyCached
